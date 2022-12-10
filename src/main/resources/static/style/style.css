@@ -1,0 +1,56 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+      height: 100%;
+      line-height: 25px;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/images/petbg.jpg");
+      min-height: 100%;
+    }
+
+    .bgimg-contactus {
+          background-position: center;
+          background-size: cover;
+          background-image: url("/images/contactusbg.jpg");
+          min-height: 100%;
+        }
+    .bgimg-ourservices {
+            background-position: center;
+            background-size: cover;
+            background-image: url("/images/ourservicesbg.jpg");
+            min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    .logo {
+    width: 80px;
+    height: 80px;
+    }
+
+    .w3-right {
+        padding-block: 30px;
+    }
+    .w3-large {
+        color:#111;
+    }
+    .main-heading {
+        color: #878;
+    }
+
+    .w3-border {
+        background-color: transparent;
+    }
+
+    .contactus-social {
+        padding: 50px 20px;
+    }
+    .about-heading {
+        margin-top: 40px;
+    }

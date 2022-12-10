@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Pet Vet Care</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="" th:href="@{style/w3.css}">
+  <link rel="stylesheet" href="" th:href="@{style/font.css}">
+  <link rel="stylesheet" href="" th:href="@{/style/style.css}">
+  <link rel="stylesheet" href="" th:href="@{style/font-awesome.css}">
+  <link rel="stylesheet" href="" th:href="@{https://www.w3schools.com/w3css/4/w3.css}">
+  <link rel="stylesheet" href="" th:href="@{https://fonts.googleapis.com/css?family=Raleway}">
+  <link rel="stylesheet" href="" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+  <script src="" th:src="@{/script/script.js}"></script>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" th:href="@{/}" class="w3-bar-item w3-button w3-wide" ><img alt="Logo" class="logo" src="" th:src="@{/images/petdocs.ico}"/></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="" th:href="@{ourservices}" class="w3-bar-item w3-button">OUR SERVICES</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#gallery" class="w3-bar-item w3-button">GALLERY</a>
+      <a href="" th:href="@{contactus}" class="w3-bar-item w3-button">CONTACT US</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a  class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="{
+    var mySidebar = document.getElementById('mySidebar');
+    if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    } else {
+    mySidebar.style.display = 'block';
+    }
+    }" style="margin-top: 25px;">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="{var mySidebar = document.getElementById('mySidebar');mySidebar.style.display = 'none';}" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="" th:href="@{ourservices}" onclick="{var mySidebar = document.getElementById('mySidebar');mySidebar.style.display = 'none';}" class="w3-bar-item w3-button">OUR SERVICES</a>
+  <a href="#about" onclick="{var mySidebar = document.getElementById('mySidebar');mySidebar.style.display = 'none';}" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#gallery" onclick="{var mySidebar = document.getElementById('mySidebar');mySidebar.style.display = 'none';}" class="w3-bar-item w3-button">GALLERY</a>
+  <a href="" th:href="@{contactus}" onclick="{var mySidebar = document.getElementById('mySidebar');mySidebar.style.display = 'none';}" class="w3-bar-item w3-button">CONTACT US</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding: 60px;padding-top: 140px;">
+    <span class="w3-jumbo w3-hide-small main-heading">We Care For Your <b>Pet</b></span><br><br><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium main-heading">We Care For Your <b>Pet</b></span><br><br><br>
+    <span class="w3-large">Stop worrying about your pet,We are here to take care<br>
+    We're your pet's Second Best Friends</span>
+    <p><a th:href="@{booknow}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Book Now</a></p>
+  </div>
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:100px 16px" id="about">
+  <h3 class="w3-center about-heading">ABOUT THE PET CARE</h3>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <p>Our goal is to provide a compassionate professional environment to make your experience comfortable.</p>
+      <p>Our staff is friendly, knowledgable and very helpful in addressing your pet's health and financial concerns for you.</p>
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<div class="w3-container" style="padding:128px 16px" id="gallery">
+  <h3 class="w3-center">PHOTO GALLERY</h3>
+  <p class="w3-center w3-large">What we've done for pet's</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img th:src="@{/images/slidepic2.jpg}" src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img th:src="@{/images/slidepic8.jpg}" src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img th:src="@{/images/slidepic6.jpg}" src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img th:src="@{/images/slidepic7.jpg}" src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="" th:src="@{/images/slidepic5.jpg}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="" th:src="@{/images/slidepic3.jpg}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="" th:src="@{/images/slidepic4.jpg}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="" th:src="@{/images/slidepic1.jpg}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p class="w3-small">This website was made with Love,By <b> PET-CARE </b></p>
+</footer>
+</body>
+</html>
